@@ -4,33 +4,32 @@ import random
 
 pygame.init()
 
-screen = pygame.display.set_mode((800, 600))
+# créer la fenetre que vous insérerez dans une variable "screnn" avec la fonction display.set_mode(([width], [height]))
 
 
 pygame.display.set_caption("Space Invaders")
 icon = pygame.image.load("Game/space.png")
 pygame.display.set_icon(icon)
 
-# variables positions
-player_positionsX = 370
-player_positionsY = 480
+# définir les positions du jouer dans les variables player_positionX et player_positionY avec X = 370 et Y = 480
 
 # Player
-playerImg = pygame.image.load("Game/player.png")
+playerImg = pygame.image.load([nom de limage])
 playerX = player_positionsX
 playerY = player_positionsY
 playerX_change = 0
 playerY_change = 0
 
 # ennemy
-ennemyImg = pygame.image.load("Game/alien.png")
-ennemyX = random.randint(0, 736)
-ennemyY = random.randint(0, 200)
+ennemyImg = pygame.image.load(nom de limage)
+
+#définir la position ennemyX de l'ennemi avec random.randint(0, 736) et ennemyY de meme mais avec les valeurs (0, 200)
+
 ennemyX_change = 0.2
 ennemyY_change = 40
 
 # ennemy2
-ennemyImg = pygame.image.load("Game/alien.png")
+ennemyImg = pygame.image.load([nom de limage])
 ennemyX2 = random.randint(0, 736)
 ennemyY2 = random.randint(0, 200)
 ennemyX2_change = 0.2
@@ -60,7 +59,7 @@ def Ennemy2(x, y):
 
 def fire_bullet(x, y):
     global bullet_state
-    bullet_state = "fire"
+    # crée la variable bullet_state = "fire"
     screen.blit(bulletImg, (x + 16, y + -20))
 
 #collision 1
